@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 const list = document.querySelector('ul');
 const li = document.querySelectorAll('li');
 const space = ' ';
-//let array = [];
+let array = [];
 //const savedList = JSON.parse(localStorage.getItem("toDoList"));
 
 
@@ -13,7 +13,7 @@ form.addEventListener('click',function(e){
     const newLi = document.createElement('li')
     const remove = document.createElement('button')
     newLi.innerText = input.value;
-    //array.push(input.value);
+    array.push(input.value);
     list.appendChild(newLi);
     remove.innerText = 'X';
     newLi.prepend(space);
@@ -36,6 +36,7 @@ if (e.target.tagName === 'LI'){
     }
 })
 
+console.log(array)
 
 
 
