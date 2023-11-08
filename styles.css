@@ -1,0 +1,37 @@
+.complete {
+    color:navy;
+    text-decoration: line-through;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color:cornflowerblue;
+    color: white;
+}
+
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+section{
+    background-color: rgb(128, 164, 232);
+    display: inline-block;
+    width:50vw;
+    margin-top: 10px;
+    position: relative;
+    left: 45vw;
+}
+
+form {
+    position: relative;
+    top: 5vh;
+    left: 5vw;
+}
