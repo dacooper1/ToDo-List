@@ -65,7 +65,7 @@ if (e.target.tagName === 'LI'){
     //console.log(localStorageLength)
     for (let k=0; k<localStorageLength; k++) {
 
-        //stops working after thr first button
+        //stops working after the first button
         // updates local storage
    
         if (((JSON.parse(localStorage.getItem('toDoList'))[k]) === check)) {
@@ -74,16 +74,10 @@ if (e.target.tagName === 'LI'){
             localStorage.setItem('toDoList',JSON.stringify(data))
             console.log(localStorageLength);
             console.log(data)
-            console.log(localStorage)
-                
+            console.log(localStorage)    
         }
     }
-    
 })
 
-// list.addEventListener('click',function(e) {
-//     if (e.target.tagName === 'BUTTON') {
-//         e.target.parentElement.remove();
-// }
-// })
+
 
