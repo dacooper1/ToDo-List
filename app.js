@@ -12,7 +12,6 @@ let check = '';
 
 // If there is data in Local Storage, this will add it to the list. Otherwise the list will be blank. 
 window.addEventListener('load',function(e){
-    console.log(localStorageLength)
    if (this.localStorage.length != 0) {
             data = JSON.parse(this.localStorage.getItem('toDoList'));
             for (let i=0; i<data.length; i++) {
@@ -56,6 +55,7 @@ if (e.target.tagName === 'LI'){
 // When you click on the button, it will remove the button and list item from the list.
 } else if (e.target.tagName === 'BUTTON') {
     e.target.parentElement.remove();
+    check = '';
     for (let j=2; j<e.target.parentElement.innerText.length; j++) {
         check += e.target.parentElement.innerText[j]
         }
@@ -70,11 +70,8 @@ if (e.target.tagName === 'LI'){
    
         if (((JSON.parse(localStorage.getItem('toDoList'))[k]) === check)) {
             let updated = data.indexOf((JSON.parse(localStorage.getItem('toDoList'))[k]))
-            data.splice(updated)
-            localStorage.setItem('toDoList',JSON.stringify(data))
-            console.log(localStorageLength);
-            console.log(data)
-            console.log(localStorage)    
+            data.splice(updated,1)
+            localStorage.setItem('toDoList',JSON.stringify(data))    
         }
     }
 })
